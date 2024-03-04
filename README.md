@@ -6,6 +6,8 @@ A Software as a Service (SaaS) application designed to help therapists effective
 
 [Link to General Concept](https://miro.com/app/board/uXjVNlyGhgY=/?share_link_id=631929838678)
 
+![Event storming session](/docs/TBManagement%20-%20Appointments.jpg "Event storming session")
+
 ## Core Features
 
 1. **Therapists**

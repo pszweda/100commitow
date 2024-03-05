@@ -30,6 +30,10 @@ A Software as a Service (SaaS) application designed to help therapists effective
         2. Pricing information
         3. Default scheduling parameters
         4. Assignment of therapists to specific services
+    - Creates new appointments 
+    - Manage slots for each therapist and place
+    - Sending notifications to different groups, based on executed function
+    - Allowing to reschedule appointments 
 
 4. **Accounting**
     - Handles invoicing tasks, including integration with external accounting systems.

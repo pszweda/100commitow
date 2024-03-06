@@ -25,4 +25,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/appointments', function () {
+        return view('appointments/index');
+    })->name('appointments');
 });

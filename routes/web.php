@@ -28,4 +28,10 @@ Route::middleware([
     Route::get('/appointments', function () {
         return view('appointments/index');
     })->name('appointments');
+    Route::get('/clients', function () {
+        return view('clients/index');
+    })->name('clients');
+    Route::get('/settings', function () {
+        return view('settings/index');
+    })->name('settings');
 });

@@ -1,4 +1,4 @@
-# SUPWARE - Management System for Therapy Businesses
+# TherapioApp - Management System for Therapy Businesses
 
 A Software as a Service (SaaS) application designed to help therapists effectively manage their schedules and business operations in a more organized manner.
 

@@ -9,7 +9,26 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="p-6">
-                    Clients
+                    <x-bladewind.table
+                        compact="true"
+                        divider="thin"
+                    >
+                        <x-slot name="header">
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Email</th>
+                        </x-slot>
+                        <tr>
+                            <td>Alfred Rowe</td>
+                            <td>Outsourcing</td>
+                            <td>alfred@therowe.com</td>
+                        </tr>
+                        <tr>
+                            <td>Michael K. Ocansey</td>
+                            <td>Tech</td>
+                            <td>kabutey@gmail.com</td>
+                        </tr>
+                    </x-bladewind.table>
                 </div>
             </div>
         </div>

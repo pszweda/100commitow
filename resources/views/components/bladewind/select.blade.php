@@ -3,7 +3,7 @@
     'name' => 'bw-select',
 
     // the default text to display when the select shows
-    'placeholder' => 'Select One',
+    'placeholder' => _('Select One'),
 
     /**
      * Optional function to execute when a select item is selected.
@@ -159,7 +159,7 @@
      @if(!empty($filter)) data-filter="{{ $filter}}" @endif
      @if($data == 'manual' && $selected_value != '') data-selected-value="{{implode(',',$selected_value)}}" @endif>
     <div class="flex justify-between text-sm items-center rounded-md bg-white text-slate-600 border-2 border-slate-300/50
-        dark:text-slate-300 dark:border-slate-700 dark:bg-slate-800 py-3.5 pl-4 pr-2 clickable
+        dark:text-slate-300 dark:border-slate-700 dark:bg-slate-800 py-1.5 pl-4 pr-2 clickable
         @if(!$disabled)focus:border-blue-400 cursor-pointer @else opacity-40 select-none cursor-not-allowed @endif"
          tabindex="0">
         <x-bladewind::icon name="chevron-left" class="!-ml-3 hidden scroll-left"/>
@@ -176,8 +176,8 @@
             <x-bladewind::icon name="chevron-up-down" class="opacity-40 !ml-2"/>
         </div>
     </div>
-    <div class="w-full absolute z-30 rounded-br-lg rounded-bl-lg bg-white shadow-sm shadow-slate-400 border-2 
-        border-blue-400 dark:text-slate-300 dark:border-slate-700 dark:bg-slate-800 border-t-0 -mt-1.5 
+    <div class="w-full absolute z-30 rounded-br-lg rounded-bl-lg bg-white shadow-sm shadow-slate-400 border-2
+        border-blue-400 dark:text-slate-300 dark:border-slate-700 dark:bg-slate-800 border-t-0 -mt-1.5
         hidden bw-select-items-container overflow-scroll max-h-64 animate__animated animate__fadeIn animate__faster">
         <div class="sticky top-0 min-w-full bg-slate-100 dark:bg-slate-700 py-1 pr-0 -pl-1 @if(!$searchable) hidden @endif">
             <x-bladewind::input

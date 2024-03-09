@@ -37,18 +37,227 @@
                         <x-bladewind.tab-content name="therapists" active="true">
 
                             <div>
-                                <x-bladewind.select
-                                    class="w-[250px]"
-                                    name="therapist"
-                                    label_key="name"
-                                    value_key="id"
-                                    :placeholder="__('Choose a Therapist')"
-                                    :data="[
-                                        ['name' => 'John', 'id' => 1],
-                                        ['name' => 'Jane', 'id' => 2],
-                                        ['name' => 'Joe', 'id' => 3],
-                                        ['name' => 'Jack', 'id' => 4],
-                                    ]" />
+                                <select
+                                    class="w-full border-gray-300 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                                >
+                                    <option value="">{{ __('Select Therapist') }}</option>
+                                    <option value="1">John</option>
+                                    <option value="2">Jane</option>
+                                    <option value="3">Mark</option>
+                                    <option value="4">Sally</option>
+                                    <option value="5">Sam</option>
+                                </select>
+                            </div>
+                            <div>
+                                <table class="w-full text-sm border-collapse border border-slate-400">
+                                    <thead>
+                                        <tr>
+                                            <th class="border border-slate-300">Name</th>
+                                            <th class="border border-slate-300">1</th>
+                                            <th class="border border-slate-300">2</th>
+                                            <th class="border border-slate-300">3</th>
+                                            <th class="border border-slate-300">4</th>
+                                            <th class="border border-slate-300">5</th>
+                                            <th class="border border-slate-300">6</th>
+                                            <th class="border border-slate-300">7</th>
+                                            <th class="border border-slate-300">8</th>
+                                            <th class="border border-slate-300">9</th>
+                                            <th class="border border-slate-300">10</th>
+                                            <th class="border border-slate-300">11</th>
+                                            <th class="border border-slate-300">12</th>
+                                            <th class="border border-slate-300">13</th>
+                                            <th class="border border-slate-300">14</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300">X</td>
+                                        </tr>
+                                    </tbody>
                             </div>
 
                         </x-bladewind.tab-content>

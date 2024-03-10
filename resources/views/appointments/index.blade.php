@@ -71,6 +71,8 @@
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <td class="border border-slate-300 bg-green-500">X</td>
+                                            <td class="border border-slate-300 ">X</td>
                                             <td class="border border-slate-300">X</td>
                                             <td class="border border-slate-300">X</td>
                                             <td class="border border-slate-300">X</td>
@@ -83,9 +85,7 @@
                                             <td class="border border-slate-300">X</td>
                                             <td class="border border-slate-300">X</td>
                                             <td class="border border-slate-300">X</td>
-                                            <td class="border border-slate-300">X</td>
-                                            <td class="border border-slate-300">X</td>
-                                            <td class="border border-slate-300">X</td>
+                                            <td class="border border-slate-300 bg-red-400">X</td>
                                         </tr>
                                         <tr>
                                             <td class="border border-slate-300">X</td>

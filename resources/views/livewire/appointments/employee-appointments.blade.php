@@ -1,14 +1,16 @@
 <div>
     <div class="flex justify-between mb-4">
-        <div>
+        <div class="flex items-center gap-2">
             <select
                 class="w-full border-gray-300 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                wire:model.live.debounce.300ms="selectedEmployee"
             >
                 <option value="">{{ __('Select Therapist') }}</option>
                 @foreach($employees as $employee)
                     <option value="{{ $employee['name'] }}">{{ $employee['name'] }}</option>
                 @endforeach
             </select>
+            <span wire:loading><x-bladewind.spinner></x-bladewind.spinner></span>
         </div>
         <div class="flex items-center gap-2">
             @if(!$selectedDate->isToday())
@@ -48,47 +50,51 @@
         </div>
     </div>
     <div>
-        <div
-            class="w-full overflow-x-auto overflow-y-auto relative"
-        >
-            <table class="w-full text-sm border-collapse border border-slate-400 ">
-                <thead>
-                <tr>
-                    <th class="border border-slate-300 min-w-[150px]">Name</th>
-                    @for($day = 1; $day <= $this->daysInCurrentMonth; $day++)
-                        <th class="
+        @if($selectedEmployee)
+            <div
+                class="w-full overflow-x-auto overflow-y-auto relative"
+            >
+                <table class="w-full text-sm border-collapse border border-slate-400 ">
+                    <thead class="relative border border-slate-200">
+                    <tr>
+                        <th class="border border-slate-300 min-w-[150px] sticky left-0 bg-white">Name</th>
+                        @for($day = 1; $day <= $this->daysInCurrentMonth; $day++)
+                            <th class="
                             border border-slate-300 min-w-[50px]
                             @if(in_array($this->getDateNameFromDay($day)->dayOfWeek, [6,0]))
                                 bg-slate-200
                             @endif
                         ">
-                            <div
-                                class="flex flex-col">
-                                <span>{{ $day }}</span>
-                                <span>{{ $this->getDateNameFromDay($day)->shortDayName }}</span>
-                            </div>
-                        </th>
-                    @endfor
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($clients as $key => $client)
-                    <tr>
-                        <td class="border border-slate-300 p-2 sticky">{{ $client['name'] }}</td>
-                        @for($day = 1; $day <= $this->daysInCurrentMonth; $day++)
-                            <td
-                                class="
+                                <div
+                                    class="flex flex-col">
+                                    <span>{{ $day }}</span>
+                                    <span>{{ $this->getDateNameFromDay($day)->shortDayName }}</span>
+                                </div>
+                            </th>
+                        @endfor
+                    </tr>
+                    </thead>
+                    <tbody class="relative">
+                    @foreach($clients as $key => $client)
+                        <tr>
+                            <td class="border border-slate-300 p-2 sticky left-0 bg-white">{{ $client['name'] }}</td>
+                            @for($day = 1; $day <= $this->daysInCurrentMonth; $day++)
+                                <td
+                                    class="
                                     border border-slate-300
                                     hover:bg-slate-100
                                 "
-                            >
+                                >
 
-                            </td>
-                        @endfor
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
-        </div>
+                                </td>
+                            @endfor
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+        @else
+            <div>{{ _('Please select a Therapist') }}</div>
+        @endif
     </div>
 </div>

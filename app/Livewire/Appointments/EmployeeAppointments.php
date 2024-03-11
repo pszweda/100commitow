@@ -5,6 +5,8 @@ namespace App\Livewire\Appointments;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Date;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\Reactive;
+use Livewire\Attributes\Url;
 use Livewire\Component;
 
 class EmployeeAppointments extends Component
@@ -16,6 +18,9 @@ class EmployeeAppointments extends Component
     public array $clients = [];
 
     public Carbon|null $selectedDate = null;
+
+    #[Url]
+    public string $selectedEmployee = '';
 
     public function mount()
     {

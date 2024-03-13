@@ -62,6 +62,7 @@
                             aria-expanded="false"
                             aria-haspopup="true"
                             wire:click="toggleViewTypeMenu"
+                            @click.outside="Livewire.dispatch('closeViewTypeMenu')"
                         >
                             {{ __(':viewType view', ['viewType' => ucfirst($viewType->value)]) }}
                             <svg

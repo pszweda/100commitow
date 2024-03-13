@@ -4,7 +4,9 @@ namespace App\Livewire\Calendar;
 
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Date;
+use Livewire\Attributes\On;
 use Livewire\Component;
+use Symfony\Component\EventDispatcher\Attribute\AsEventListener;
 
 class Calendar extends Component
 {
@@ -38,6 +40,11 @@ class Calendar extends Component
 
     public function toggleViewTypeMenu(): void {
         $this->isViewTypeMenuOpen = !$this->isViewTypeMenuOpen;
+    }
+
+    #[On('closeViewTypeMenu')]
+    public function closeViewTypeMenu() {
+        $this->isViewTypeMenuOpen = false;
     }
 
     public function viewTypeClickHandler(CalendarViewTypes $viewType): void {

@@ -1,31 +1,32 @@
 <div class="shadow ring-1 ring-black ring-opacity-5 lg:flex lg:flex-auto lg:flex-col">
     <div class="grid grid-cols-7 gap-px border-b border-gray-300 bg-gray-200 text-center text-xs font-semibold leading-6 text-gray-700 lg:flex-none">
+        @php($daysNames = $firstDayOfCalendar)
         <div class="flex justify-center bg-white py-2">
-            <span>M</span>
+            <span>{{ $daysNames->shortDayName }}</span>
             <span class="sr-only sm:not-sr-only">on</span>
         </div>
         <div class="flex justify-center bg-white py-2">
-            <span>T</span>
+            <span>{{ $daysNames->addDay()->shortDayName }}</span>
             <span class="sr-only sm:not-sr-only">ue</span>
         </div>
         <div class="flex justify-center bg-white py-2">
-            <span>W</span>
+            <span>{{ $daysNames->addDay()->shortDayName }}</span>
             <span class="sr-only sm:not-sr-only">ed</span>
         </div>
         <div class="flex justify-center bg-white py-2">
-            <span>T</span>
+            <span>{{ $daysNames->addDay()->shortDayName }}</span>
             <span class="sr-only sm:not-sr-only">hu</span>
         </div>
         <div class="flex justify-center bg-white py-2">
-            <span>F</span>
+            <span>{{ $daysNames->addDay()->shortDayName }}</span>
             <span class="sr-only sm:not-sr-only">ri</span>
         </div>
         <div class="flex justify-center bg-white py-2">
-            <span>S</span>
+            <span>{{ $daysNames->addDay()->shortDayName }}</span>
             <span class="sr-only sm:not-sr-only">at</span>
         </div>
         <div class="flex justify-center bg-white py-2">
-            <span>S</span>
+            <span>{{ $daysNames->addDay()->shortDayName }}</span>
             <span class="sr-only sm:not-sr-only">un</span>
         </div>
     </div>

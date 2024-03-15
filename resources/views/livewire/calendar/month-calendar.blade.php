@@ -1,34 +1,11 @@
 <div class="shadow ring-1 ring-black ring-opacity-5 lg:flex lg:flex-auto lg:flex-col">
     <div class="grid grid-cols-7 gap-px border-b border-gray-300 bg-gray-200 text-center text-xs font-semibold leading-6 text-gray-700 lg:flex-none">
         @php($daysNames = $firstDayOfCalendar)
-        <div class="flex justify-center bg-white py-2">
-            <span>{{ $daysNames->shortDayName }}</span>
-            <span class="sr-only sm:not-sr-only">on</span>
-        </div>
-        <div class="flex justify-center bg-white py-2">
-            <span>{{ $daysNames->addDay()->shortDayName }}</span>
-            <span class="sr-only sm:not-sr-only">ue</span>
-        </div>
-        <div class="flex justify-center bg-white py-2">
-            <span>{{ $daysNames->addDay()->shortDayName }}</span>
-            <span class="sr-only sm:not-sr-only">ed</span>
-        </div>
-        <div class="flex justify-center bg-white py-2">
-            <span>{{ $daysNames->addDay()->shortDayName }}</span>
-            <span class="sr-only sm:not-sr-only">hu</span>
-        </div>
-        <div class="flex justify-center bg-white py-2">
-            <span>{{ $daysNames->addDay()->shortDayName }}</span>
-            <span class="sr-only sm:not-sr-only">ri</span>
-        </div>
-        <div class="flex justify-center bg-white py-2">
-            <span>{{ $daysNames->addDay()->shortDayName }}</span>
-            <span class="sr-only sm:not-sr-only">at</span>
-        </div>
-        <div class="flex justify-center bg-white py-2">
-            <span>{{ $daysNames->addDay()->shortDayName }}</span>
-            <span class="sr-only sm:not-sr-only">un</span>
-        </div>
+        @foreach(range(0, 6) as $day)
+            <div class="flex justify-center bg-white py-2">
+                <span>{{ $daysNames->addDays($day)->shortDayName }}</span>
+            </div>
+        @endforeach
     </div>
     <div class="flex bg-gray-200 text-xs leading-6 text-gray-700 lg:flex-auto">
         <div class="hidden w-full lg:grid lg:grid-cols-7 lg:grid-rows-6 lg:gap-px">

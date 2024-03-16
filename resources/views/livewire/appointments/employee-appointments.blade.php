@@ -97,8 +97,8 @@
                     </thead>
                     <tbody class="relative">
                     @foreach($clients as $key => $client)
-                        <tr>
-                            <td class="border border-slate-300 p-2 sticky left-0 bg-white">{{ $client['name'] }}</td>
+                        <tr class="group hover:bg-gray-50">
+                            <td class="border border-slate-300 p-2 sticky left-0 group-hover:bg-gray-50 bg-white">{{ $client['name'] }}</td>
                             @for($day = 1; $day <= $this->daysInCurrentMonth; $day++)
                                 <td
                                     class="

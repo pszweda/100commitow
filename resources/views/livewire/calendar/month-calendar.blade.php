@@ -9,14 +9,6 @@
     </div>
     <div class="flex bg-gray-200 text-xs leading-6 text-gray-700 lg:flex-auto">
         <div class="hidden w-full lg:grid lg:grid-cols-7 lg:grid-rows-6 lg:gap-px">
-            <!--
-              Always include: "relative py-2 px-3"
-              Is current month, include: "bg-white"
-              Is not current month, include: "bg-gray-50 text-gray-500"
-            -->
-            <!--
-              Is today, include: "flex h-6 w-6 items-center justify-center rounded-full bg-indigo-600 font-semibold text-white"
-            -->
             @foreach(range(0,41) as $dayInMonthNumber)
                 @php($thisDay = $firstDayOfCalendar->addDays($dayInMonthNumber))
                 <div class="relative  px-3 py-2 {{ $thisDay->isCurrentMonth() ? 'bg-white' : 'bg-gray-50 text-gray-500' }}">
@@ -24,40 +16,31 @@
                         @if($thisDay->isToday())
                             class="flex h-6 w-6 items-center justify-center rounded-full bg-indigo-600 font-semibold text-white"
                         @endif
-                        datetime="2021-12-28">{{ $thisDay->day }}</time>
-{{--                    <ol class="mt-2">--}}
-{{--                        <li>--}}
-{{--                            <a--}}
-{{--                                href="#"--}}
-{{--                                class="group flex"--}}
-{{--                            >--}}
-{{--                                <p class="flex-auto truncate font-medium text-gray-900 group-hover:text-indigo-600">--}}
-{{--                                    Date night--}}
-{{--                                </p>--}}
-{{--                                <time--}}
-{{--                                    datetime="2022-01-08T18:00"--}}
-{{--                                    class="ml-3 hidden flex-none text-gray-500 group-hover:text-indigo-600 xl:block"--}}
-{{--                                >6PM--}}
-{{--                                </time>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ol>--}}
+                        datetime="{{ $thisDay->format('Y-m-d') }}"
+                    >{{ $thisDay->day }}</time>
+                    <ol class="mt-2">
+                        <li>
+                            <a
+                                href="#"
+                                class="group flex"
+                            >
+                                <p class="flex-auto truncate font-medium text-gray-900 group-hover:text-indigo-600">
+                                    Przykładowe zdarzenie
+                                </p>
+                                <time
+                                    datetime="2022-01-08T18:00"
+                                    class="ml-3 hidden flex-none text-gray-500 group-hover:text-indigo-600 xl:block"
+                                >6PM
+                                </time>
+                            </a>
+                        </li>
+                    </ol>
                 </div>
             @endforeach
 
 
         </div>
         <div class="isolate grid w-full grid-cols-7 grid-rows-6 gap-px lg:hidden">
-            <!--
-              Always include: "flex h-14 flex-col py-2 px-3 hover:bg-gray-100 focus:z-10"
-              Is current month, include: "bg-white"
-              Is not current month, include: "bg-gray-50"
-              Is selected or is today, include: "font-semibold"
-              Is selected, include: "text-white"
-              Is not selected and is today, include: "text-indigo-600"
-              Is not selected and is current month, and is not today, include: "text-gray-900"
-              Is not selected, is not current month, and is not today: "text-gray-500"
-            -->
             <button
                 type="button"
                 class="flex h-14 flex-col bg-gray-50 px-3 py-2 text-gray-500 hover:bg-gray-100 focus:z-10"

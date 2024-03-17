@@ -178,7 +178,7 @@
                 ])
             @break
             @case(\App\Livewire\Calendar\CalendarViewTypes::Week)
-                @livewire('calendar.week', [
+                @livewire('calendar.week-calendar', [
                     'currentDate' => $currentDate
                 ])
             @break

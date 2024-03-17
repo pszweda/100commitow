@@ -4,7 +4,6 @@ namespace App\Livewire\Calendar;
 
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Carbon;
-use Livewire\Attributes\Computed;
 use Livewire\Component;
 
 class MonthCalendar extends Component

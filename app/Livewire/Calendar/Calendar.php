@@ -11,7 +11,7 @@ use Symfony\Component\EventDispatcher\Attribute\AsEventListener;
 class Calendar extends Component
 {
     public Carbon $currentDate;
-    public CalendarViewTypes $viewType = CalendarViewTypes::Month;
+    public CalendarViewTypes $viewType = CalendarViewTypes::Week;
     public bool $isViewTypeMenuOpen = false;
 
     public function mount()

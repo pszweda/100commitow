@@ -31,7 +31,18 @@ Route::middleware([
     Route::get('/clients', function () {
         return view('clients/index');
     })->name('clients');
-    Route::get('/settings', function () {
-        return view('settings/index');
-    })->name('settings');
+    Route::group(['prefix' => 'settings'], function () {
+        Route::get('/', function () {
+            return view('settings.index');
+        })->name('settings');
+        Route::get('/services', function () {
+            return view('settings/index');
+        })->name('settings.services');
+        Route::get('/goals', function () {
+            return view('settings/index');
+        })->name('settings.goals');
+        Route::get('/pricing', function () {
+            return view('settings/index');
+        })->name('settings.pricing');
+    });
 });

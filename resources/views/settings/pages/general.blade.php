@@ -3,5 +3,7 @@
         <x-page-title>
             {{ __('settings.pages.general') }}
         </x-page-title>
+
+        @livewire('settings.general-form')
     </div>
 </div>

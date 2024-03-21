@@ -100,7 +100,7 @@
             @if($hover_effect) with-hover-effect @endif @if($compact) compact @endif">
             @if(empty($data))
                 <thead>
-                <tr class="bg-gray-200 dark:bg-slate-800">{{ $header }}</tr>
+                <tr class="bg-slate-200 dark:bg-slate-800">{{ $header }}</tr>
                 </thead>
                 <tbody>{{ $slot }}</tbody>
             @else

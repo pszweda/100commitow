@@ -19,6 +19,7 @@
         <link href="{{ asset('vendor/bladewind/css/animate.min.css') }}" rel="stylesheet" />
         <link href="{{ asset('vendor/bladewind/css/bladewind-ui.min.css') }}" rel="stylesheet" />
 
+        <wireui:scripts />
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireStyles
     </head>

@@ -4,30 +4,13 @@
             {{ __('settings.pages.services.heading') }}
         </x-page-title>
 
-        @livewire('datatable.datatable', [
-            'columns' => [
-                'service_name' => [
-                    'label' => __('settings.pages.services.service_name'),
-                ],
-                'default_pricing' => [
-                    'label' => __('settings.pages.services.default_pricing'),
-                ],
-                'actions' => [
-                    'label' => __('settings.pages.services.actions'),
-                ],
-            ],
-            'data' => [
-                [
-                    'service_name' => __('settings.pages.services.service_name'),
-                ]
-            ],
-            'showRowNumber' => true,
-            'rowsPerPage' => 10,
-            'massActions' => [
-                'delete' => true,
-            ]
+        <x-select
+            label="Select Status"
+            placeholder="Select one status"
+            :options="['Active', 'Pending', 'Stuck', 'Done']"
+        />
 
-        ])
+
 
     </div>
 </div>

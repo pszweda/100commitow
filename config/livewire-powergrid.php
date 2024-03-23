@@ -30,7 +30,7 @@ return [
         'flatpickr' => [
             'locales' => [
                 'pt_BR' => [
-                    'locale'     => 'pt',
+                    'locale'     => 'pl',
                     'dateFormat' => 'd/m/Y H:i',
                     'enableTime' => true,
                     'time_24hr'  => true,

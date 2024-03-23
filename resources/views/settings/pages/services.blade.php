@@ -1,15 +1,13 @@
 <div class="col-span-3">
     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg p-6">
-        <x-page-title>
+        <x-page-title class="flex justify-between">
             {{ __('settings.pages.services.heading') }}
+
+            <x-button black label="{{ __('settings.pages.services.add') }}" />
         </x-page-title>
 
-        <x-select
-            label="Select Status"
-            placeholder="Select one status"
-            :options="['Active', 'Pending', 'Stuck', 'Done']"
-        />
 
+        @livewire('settings.services-table')
 
 
     </div>

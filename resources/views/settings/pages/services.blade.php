@@ -3,7 +3,7 @@
         <x-page-title class="flex justify-between">
             {{ __('settings.pages.services.heading') }}
 
-            <x-button black label="{{ __('settings.pages.services.add') }}" />
+            <x-wireui-button black label="{{ __('settings.pages.services.add') }}" />
         </x-page-title>
 
 

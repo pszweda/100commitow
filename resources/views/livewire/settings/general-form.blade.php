@@ -15,6 +15,8 @@
             <option value="dark">{{ __('settings.pages.general.dark') }}</option>
             <option value="system">{{ __('settings.pages.general.system') }}</option>
         </select>
+
+
             <x-input-error
                 for="mode"
                 class="mt-2"

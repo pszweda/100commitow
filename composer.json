@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^v3.4.8",
         "mkocansey/bladewind": "^2.4",
+        "moneyphp/money": "^4.5",
         "openspout/openspout": "^4.23",
         "power-components/livewire-powergrid": "^5.4",
         "wireui/wireui": "^1.19"

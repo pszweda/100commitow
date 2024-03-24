@@ -29,7 +29,7 @@ return [
          */
         'flatpickr' => [
             'locales' => [
-                'pt_BR' => [
+                'pl_PL' => [
                     'locale'     => 'pl',
                     'dateFormat' => 'd/m/Y H:i',
                     'enableTime' => true,
@@ -48,7 +48,7 @@ return [
             'tom' => [
                 'plugins' => [
                     'clear_button' => [
-                        'title' => 'Remove all selected options',
+                        'title' => _('app.select.clear'),
                     ],
                 ],
             ],
@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'filter' => 'inline',
+    'filter' => 'outside',
 
     /*
     |--------------------------------------------------------------------------

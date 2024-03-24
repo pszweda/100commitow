@@ -7,7 +7,9 @@
         </x-page-title>
 
 
-        @livewire('settings.services-table')
+        @livewire('services.services-table', [
+            'showFilters' => false
+        ])
 
 
     </div>

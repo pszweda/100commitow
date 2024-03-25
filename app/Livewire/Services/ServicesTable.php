@@ -5,6 +5,7 @@ namespace App\Livewire\Services;
 use App\Models\Services\Base\ServiceModel;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\URL;
 use PowerComponents\LivewirePowerGrid\Button;
 use PowerComponents\LivewirePowerGrid\Column;
 use PowerComponents\LivewirePowerGrid\Exportable;
@@ -96,14 +97,14 @@ final class ServicesTable extends PowerGridComponent
     #[\Livewire\Attributes\On('edit')]
     public function edit($rowId): void
     {
-        $this->js('alert("'.$rowId.'")');
+        $this->redirect(URL::route('settings.services.edit', ['service' => $rowId]));
     }
 
     public function actions(ServiceModel $row): array
     {
         return [
             Button::add('edit')
-                ->slot('<x-bladewind.icon name="pencil" />')
+                ->slot('Edit')
                 ->id()
                 ->class('text-xs border border-gray-300 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center')
                 ->dispatch('edit', ['rowId' => $row->id])

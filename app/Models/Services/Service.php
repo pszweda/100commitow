@@ -6,6 +6,7 @@ namespace App\Models\Services;
 use App\Models\Services\Base\ServiceModel;
 use Illuminate\Support\Collection;
 use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\UuidInterface;
 
 class Service implements \App\Domain\Services\Services {
 
@@ -34,7 +35,7 @@ class Service implements \App\Domain\Services\Services {
         return \App\Domain\Services\Service::fromArray($this->model::where('name', $name)->first()->toArray());
     }
 
-    public function getById(Uuid $id): ?\App\Domain\Services\Service {
+    public function getById(UuidInterface $id): ?\App\Domain\Services\Service {
         return \App\Domain\Services\Service::fromArray($this->model::where('id', $id)->first()->toArray());
     }
 }

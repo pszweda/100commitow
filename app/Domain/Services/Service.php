@@ -5,11 +5,12 @@ namespace App\Domain\Services;
 
 use Money\Money;
 use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\UuidInterface;
 
 class Service {
 
     public function __construct(
-        public readonly ?Uuid $id,
+        public readonly ?UuidInterface $id,
         public readonly string $name,
         public readonly ?string $description,
         public readonly Money $price,
@@ -18,7 +19,7 @@ class Service {
     }
 
     public static function create(
-        ?Uuid $id,
+        ?UuidInterface $id,
         string $name,
         ?string $description,
         Money $price,
@@ -35,11 +36,11 @@ class Service {
 
     public static function fromArray(array $data): self {
         return self::create(
-            $data['id'] ?? null,
+            Uuid::fromString($data['id']) ?? null,
             $data['name'],
             $data['description'] ?? null,
-            $data['price'],
-            $data['active'] ?? null
+            new Money($data['price'], new \Money\Currency('EUR')),
+            !!$data['active'] ?? null
         );
     }
 

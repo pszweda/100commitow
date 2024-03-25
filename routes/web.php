@@ -35,9 +35,14 @@ Route::middleware([
         Route::get('/', function () {
             return view('settings.index');
         })->name('settings');
-        Route::get('/services', function () {
-            return view('settings/index');
-        })->name('settings.services');
+        Route::controller(\App\Http\Controllers\Services\ServicesController::class)->group(function () {
+            Route::get('/services', 'index')->name('settings.services.index');
+            Route::get('/services/create', 'create')->name('settings.services.create');
+            Route::post('/services', 'store')->name('settings.services.store');
+            Route::get('/services/{service}', 'edit')->name('settings.services.edit');
+            Route::post('/services/{service}', 'update')->name('settings.services.update');
+            Route::delete('/services/{service}', 'destroy')->name('settings.services.destroy');
+        });
         Route::get('/goals', function () {
             return view('settings/index');
         })->name('settings.goals');

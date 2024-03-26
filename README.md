@@ -34,6 +34,7 @@ A Software as a Service (SaaS) application designed to help therapists effective
     - Manage slots for each therapist and place
     - Sending notifications to different groups, based on executed function
     - Allowing to reschedule appointments 
+			- Option to make appointments for single client and for group (collect all clients for one date)
 
 4. **Accounting**
     - Handles invoicing tasks, including integration with external accounting systems.
@@ -59,3 +60,6 @@ A Software as a Service (SaaS) application designed to help therapists effective
 
 9. **Widget** 
    - Widget that will allow to automate signups for selected services 
+
+
+

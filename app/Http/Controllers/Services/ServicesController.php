@@ -14,7 +14,7 @@ class ServicesController extends Controller
     }
 
     public function index() {
-        return view('settings.pages.services');
+        return view('settings.index');
     }
 
     public function edit(Request $request, string $service) {
@@ -27,6 +27,10 @@ class ServicesController extends Controller
         return view('settings.pages.services.edit', [
             'service' => $service
         ]);
+    }
+
+    public function create(Request $request) {
+        return view('settings.pages.services.create');
     }
 
     public function update(Request $request, string $service) {

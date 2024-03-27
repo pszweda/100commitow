@@ -36,7 +36,7 @@ Route::middleware([
             return view('settings.index');
         })->name('settings');
         Route::controller(\App\Http\Controllers\Services\ServicesController::class)->group(function () {
-            Route::get('/services', 'index')->name('settings.services.index');
+            Route::get('/services', 'index')->name('settings.services');
             Route::get('/services/create', 'create')->name('settings.services.create');
             Route::post('/services', 'store')->name('settings.services.store');
             Route::get('/services/{service}', 'edit')->name('settings.services.edit');
